@@ -11,7 +11,8 @@ namespace ProyectoHospital
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //lblData.Text = (String)Session["codeEmployee"];
+            
+                lblCode.Text = (String)Session["codeEmployee"];
         }
 
         protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)

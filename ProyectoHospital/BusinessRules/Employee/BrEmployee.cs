@@ -3,6 +3,7 @@
 namespace BusinessRules.Employee
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.SqlClient;
     using DataAccess.Empleado;
     
@@ -18,6 +19,24 @@ namespace BusinessRules.Employee
                     connection.Open();
                     DaEmployee odaUser = new DaEmployee();
                     answer = odaUser.Login(connection, data);
+                }
+                catch (Exception e)
+                {
+                    RecordLog(e.Message, e.StackTrace);
+                }
+            }
+            return answer;
+        }
+        public string GetListEmployee()
+        {
+            String answer="" ;
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    DaEmployee odaUser = new DaEmployee();
+                    answer = odaUser.GetListEmployee(connection);
                 }
                 catch (Exception e)
                 {

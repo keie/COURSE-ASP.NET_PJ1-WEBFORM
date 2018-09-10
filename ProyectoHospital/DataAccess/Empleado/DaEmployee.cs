@@ -15,5 +15,14 @@ namespace DataAccess.Empleado
             if (obj != null) answer = obj.ToString();
             return answer;
         }
+        public string GetListEmployee(SqlConnection sqlConnection)
+        {
+            string answer = "";
+            SqlCommand sqlCommand = new SqlCommand("[usp.EMPLOYEE.GetList]", sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            object obj = sqlCommand.ExecuteScalar();
+            if (obj != null) answer = obj.ToString();
+            return answer;
+        }
     }
 }

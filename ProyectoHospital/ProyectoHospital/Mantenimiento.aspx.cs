@@ -13,5 +13,10 @@ namespace ProyectoHospital
         {
 
         }
+
+        protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
+        {
+           
+        }
     }
 }

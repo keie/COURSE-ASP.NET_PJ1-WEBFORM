@@ -19,7 +19,7 @@ namespace BusinessRules
         public brConnection()
         {
             ConnectionString = ConfigurationManager.ConnectionStrings["AZURE"].ConnectionString;
-            ArchiveLog = ConfigurationManager.AppSettings["MiPc"];
+            ArchiveLog = ConfigurationManager.AppSettings["Ofi"];
         }
 
         public void RecordLog(string ErrorMessage, string ErrorDetails)
