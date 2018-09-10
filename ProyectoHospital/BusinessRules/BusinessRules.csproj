@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,9 +43,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrConnection.cs" />
+    <Compile Include="BrSaveLog.cs" />
+    <Compile Include="Employee\BrEmployee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{e011f540-9545-48ac-9c7c-17a3bb7c0202}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{417313f7-7818-4192-bdba-d7d31f73f92a}</Project>
       <Name>Entity</Name>
