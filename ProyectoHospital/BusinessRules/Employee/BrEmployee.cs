@@ -45,5 +45,24 @@ namespace BusinessRules.Employee
             }
             return answer;
         }
+        public bool DeleteEmployee(string data)
+        {
+            bool answer =false;
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    DaEmployee odaUser = new DaEmployee();
+                    answer = odaUser.DeleteEmployee(connection,data);
+
+                }
+                catch (Exception e)
+                {
+                    RecordLog(e.Message, e.StackTrace);
+                }
+            }
+            return answer;
+        }
     }
 }
