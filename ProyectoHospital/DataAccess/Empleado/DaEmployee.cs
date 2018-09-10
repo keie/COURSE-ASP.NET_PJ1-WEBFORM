@@ -34,5 +34,15 @@ namespace DataAccess.Empleado
             if (obj >=1) answer = true;
             return answer;
         }
+        public bool UpdateEmployee(SqlConnection sqlConnection, string data)
+        {
+            bool answer = false;
+            SqlCommand sqlCommand = new SqlCommand("[usp.EMPLOYEE.Update]", sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@data", data);
+            int obj = sqlCommand.ExecuteNonQuery();
+            if (obj >= 1) answer = true;
+            return answer;
+        }
     }
 }
