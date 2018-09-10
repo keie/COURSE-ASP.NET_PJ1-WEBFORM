@@ -76,8 +76,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ControlPago.aspx" />
+    <Content Include="Employess\Employees.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Hospitalizacion.aspx" />
+    <Content Include="Images\edit.png" />
     <Content Include="Login.aspx" />
     <Content Include="Mantenimiento.aspx" />
     <Content Include="Menu.aspx" />
@@ -92,6 +94,13 @@
     </Compile>
     <Compile Include="ControlPago.aspx.designer.cs">
       <DependentUpon>ControlPago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employess\Employees.aspx.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employess\Employees.aspx.designer.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
