@@ -18,9 +18,12 @@ namespace ProyectoHospital
             var data = user + '|' + password;
             BrEmployee brEmployee = new BrEmployee();
             string Request = brEmployee.Login(data);
-            if (Request == null)
+            if (string.IsNullOrEmpty(Request))
             {
                 Request = "ERROR";
+                lblReq.Text = "Contraseña o usuario incorrecto";
+                lblReq.Visible = true;
+                
             }
             else
             {

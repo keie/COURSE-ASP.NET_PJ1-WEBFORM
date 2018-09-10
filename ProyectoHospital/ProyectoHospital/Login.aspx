@@ -21,6 +21,13 @@
             width: 439px;
             text-align: right;
         }
+        .auto-style6 {
+            width: 439px;
+            height: 22px;
+        }
+        .auto-style7 {
+            height: 22px;
+        }
     </style>
 </head>
 <body>
@@ -46,6 +53,12 @@
                     <td class="auto-style3">&nbsp;</td>
                     <td>
                         <asp:Button ID="btnEnter" runat="server" OnClick="btnEnter_Click" Text="Ingresar" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style6"></td>
+                    <td class="auto-style7">
+                        <asp:Label ID="lblReq" runat="server" BorderColor="Red" ForeColor="#FF3300" Text="Label" Visible="False"></asp:Label>
                     </td>
                 </tr>
             </table>
