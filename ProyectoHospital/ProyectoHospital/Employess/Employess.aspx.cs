@@ -114,27 +114,14 @@ namespace ProyectoHospital.Employess
         {
 
             castToTexbox(e);
-            string data = (codeEmployee + '|' +
+            Session["dataEmployee"] = (codeEmployee + '|' +
               lastName + '|' +
               name + '|' +
               occupation + '|' +
               account + '|' +
               password + '|' +
               turn);
-            bool Request = br.UpdateEmployee(data);
-            if (!Request)
-            {
-                lblData.Text = "HUBO UN ERROR";
-                lblData.Visible = true;
-                loadData();
-            }
-            else
-            {
-                lblData.Text = "Transaccion realizada con exito";
-                lblData.Visible = true;
-                lblData.ForeColor = System.Drawing.Color.Blue;
-                loadData();
-            }
+            Response.Redirect("EmployeeEdition.aspx");
         }
 
         protected void GridView1_RowUpdated(object sender, GridViewUpdatedEventArgs e)
