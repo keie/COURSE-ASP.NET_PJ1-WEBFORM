@@ -1,0 +1,22 @@
+/****** Object:  StoredProcedure [dbo].[usp.EMPLOYEE.Register]    Script Date: 9/10/2018 10:04:48 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROC [dbo].[usp.EMPLOYEE.Register]
+@data varchar(max) AS BEGIN
+declare @lastName varchar(max)
+declare @name varchar(max)
+declare @type varchar(max)
+declare @account varchar(max)
+declare @password varchar(max)
+declare @turn varchar(max)
+set @lastname= (select  top 1  splitdata from split(@data,'|') where id=1 order by splitdata asc)
+set @name= (select  top 1  splitdata from split(@data,'|') where id=2 order by splitdata asc)
+set @type= (select  top 1  splitdata from split(@data,'|') where id=3 order by splitdata asc)
+set @account= (select  top 1  splitdata from split(@data,'|') where id=4 order by splitdata asc)
+set @password= (select  top 1  splitdata from split(@data,'|') where id=5 order by splitdata asc)
+set @turn= (select  top 1  splitdata from split(@data,'|') where id=6 order by splitdata asc)
+INSERT INTO EMPLEADO(apellido,
+nombre,tipo_empleado,cuenta,password,turno)VALUES(@lastname,@name,@type,@account,@password,@turn)
+END
