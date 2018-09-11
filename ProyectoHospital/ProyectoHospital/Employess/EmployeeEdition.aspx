@@ -77,6 +77,12 @@
                     <asp:Label ID="lblData" runat="server" Text="Label" Visible="False"></asp:Label>
                 </td>
             </tr>
+            <tr>
+                <td class="auto-style3">
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Employess/Employess.aspx">Return</asp:HyperLink>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
         </table>
         <div>
         </div>

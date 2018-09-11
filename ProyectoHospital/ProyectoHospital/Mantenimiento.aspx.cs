@@ -16,7 +16,26 @@ namespace ProyectoHospital
 
         protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
         {
-           
+            if (Menu1.Items[0].Selected)
+            {
+                Response.Redirect("Employess/Employess.aspx");
+            }
+           /* if (Menu1.Items[1].Selected)
+            {
+                Response.Redirect("Hospitalizacion.aspx");
+            }
+            if (Menu1.Items[2].Selected)
+            {
+                Response.Redirect("RegistroConsumo.aspx");
+            }
+            if (Menu1.Items[3].Selected)
+            {
+                Response.Redirect("ControlPago.aspx");
+            }
+            if (Menu1.Items[4].Selected)
+            {
+                Response.Redirect("Reportes.aspx");
+            }*/
         }
     }
 }

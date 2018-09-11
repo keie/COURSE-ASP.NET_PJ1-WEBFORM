@@ -12,6 +12,17 @@
         .auto-style2 {
             width: 100%;
         }
+        .auto-style3 {
+            width: 322px;
+        }
+        .auto-style4 {
+            width: 322px;
+            text-align: right;
+            height: 23px;
+        }
+        .auto-style5 {
+            height: 23px;
+        }
     </style>
 </head>
 <body>
@@ -20,15 +31,15 @@
             <strong>EMPLEADOS</strong></div>
         <table class="auto-style2">
             <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
+                <td class="auto-style3">&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>
+                <td class="auto-style3">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style3">
                     <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleted="GridView1_RowDeleted" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdated="GridView1_RowUpdated" OnRowUpdating="GridView1_RowUpdating" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
@@ -50,14 +61,18 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>
+                <td class="auto-style4">
                     <asp:Label ID="lblData" runat="server" BackColor="White" ForeColor="Red" Text="Label" Visible="False"></asp:Label>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style5"></td>
+            </tr>
+            <tr>
+                <td class="auto-style3">
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Mantenimiento.aspx">Return</asp:HyperLink>
+                </td>
+                <td>
+                    <asp:HyperLink ID="linkEmployee" runat="server" NavigateUrl="~/Employess/EmployeeRegister.aspx">Create Employee</asp:HyperLink>
+                </td>
             </tr>
         </table>
     </form>
