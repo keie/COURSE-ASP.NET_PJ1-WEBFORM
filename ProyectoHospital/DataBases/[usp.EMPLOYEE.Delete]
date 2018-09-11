@@ -1,0 +1,10 @@
+/****** Object:  StoredProcedure [dbo].[usp.EMPLOYEE.Delete]    Script Date: 9/10/2018 10:08:49 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROC [dbo].[usp.EMPLOYEE.Delete]
+@data varchar(max) AS BEGIN
+DELETE EMPLEADO WHERE codigo_empleado=CONVERT(int,@data)
+END
