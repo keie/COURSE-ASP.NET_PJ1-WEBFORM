@@ -1,0 +1,17 @@
+/****** Object:  StoredProcedure [dbo].[usp.EMPLOYEE.login]    Script Date: 9/10/2018 10:06:59 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROC [dbo].[usp.EMPLOYEE.login]
+@data varchar(max)
+AS BEGIN
+	declare @user varchar(max)
+	declare @pasword varchar(max)
+	declare @code int
+	set @user= (select  top 1  splitdata from split(@data,'|') where id=1 order by splitdata asc)
+	set @pasword= (select  top 1  splitdata from split(@data,'|') where id=2 order by splitdata asc)
+
+	SELECT codigo_empleado FROM EMPLEADO where cuenta=@user and password=@pasword
+
+END
