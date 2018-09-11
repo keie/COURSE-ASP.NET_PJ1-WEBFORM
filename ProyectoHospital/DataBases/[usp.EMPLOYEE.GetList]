@@ -1,0 +1,18 @@
+/****** Object:  StoredProcedure [dbo].[usp.EMPLOYEE.GetList]    Script Date: 9/10/2018 10:07:55 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROC [dbo].[usp.EMPLOYEE.GetList]
+AS BEGIN
+declare @aux varchar(max)
+declare @aux2 varchar(max)
+declare @response varchar(max)
+set @aux=(select 'codigo_empleado'+'|'+'apellido'+'|'+'nombre'+'|'+
+'tipo_empleado'+'|'+'cuenta'+'|'+'password'+'|'+'turno'+'¬')
+set @aux2=(SELECT(SELECT STUFF((SELECT '¬'+CONVERT(VARCHAR,codigo_empleado)+'|'+
+apellido + '|'+nombre+'|'+tipo_empleado+'|'+cuenta+'|'+password+'|'+turno FROM EMPLEADO
+for xml path('')),1,1,'')))
+set @response=@aux+@aux2
+SELECT @response
+END
