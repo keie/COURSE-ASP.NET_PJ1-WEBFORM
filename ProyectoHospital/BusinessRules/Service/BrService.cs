@@ -27,5 +27,23 @@ namespace BusinessRules.Service
             }
             return answer;
         }
+        public string GetListService()
+        {
+            String answer = "";
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    DaService odaService = new DaService();
+                    answer = odaService.GetListService(connection);
+                }
+                catch (Exception e)
+                {
+                    RecordLog(e.Message, e.StackTrace);
+                }
+            }
+            return answer;
+        }
     }
 }

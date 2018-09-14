@@ -9,11 +9,20 @@ namespace DataAccess.Service
         public bool RegisterService(SqlConnection sqlConnection, string data)
         {
             bool answer = false;
-            SqlCommand sqlCommand = new SqlCommand("[usp.EMPLOYEE.Register]", sqlConnection);
+            SqlCommand sqlCommand = new SqlCommand("[usp.SERVICE.Register]", sqlConnection);
             sqlCommand.CommandType = CommandType.StoredProcedure;
             sqlCommand.Parameters.AddWithValue("@data", data);
             int obj = sqlCommand.ExecuteNonQuery();
             if (obj >= 1) answer = true;
+            return answer;
+        }
+        public string GetListService(SqlConnection sqlConnection)
+        {
+            string answer = "";
+            SqlCommand sqlCommand = new SqlCommand("[usp.SERVICE.GetList]", sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            object obj = sqlCommand.ExecuteScalar();
+            if (obj != null) answer = obj.ToString();
             return answer;
         }
     }
