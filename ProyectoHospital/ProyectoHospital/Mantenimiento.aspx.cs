@@ -24,18 +24,18 @@ namespace ProyectoHospital
             {
                 Response.Redirect("Patients/Patients.aspx");
             }
-            /*if (Menu1.Items[2].Selected)
+            if (Menu1.Items[2].Selected)
             {
-                Response.Redirect("RegistroConsumo.aspx");
+                Response.Redirect("Beds/Beds.aspx");
             }
-            if (Menu1.Items[3].Selected)
-            {
-                Response.Redirect("ControlPago.aspx");
-            }
-            if (Menu1.Items[4].Selected)
-            {
-                Response.Redirect("Reportes.aspx");
-            }*/
+            /* if (Menu1.Items[3].Selected)
+             {
+                 Response.Redirect("ControlPago.aspx");
+             }
+             if (Menu1.Items[4].Selected)
+             {
+                 Response.Redirect("Reportes.aspx");
+             }*/
         }
     }
 }

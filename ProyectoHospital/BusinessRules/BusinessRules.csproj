@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bed\BrBed.cs" />
     <Compile Include="BrConnection.cs" />
     <Compile Include="BrSaveLog.cs" />
     <Compile Include="Employee\BrEmployee.cs" />
