@@ -90,6 +90,31 @@
 
 
         }
+
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            string code_patient = GridView1.Rows[e.RowIndex].Cells[1].Text;
+            bool Request = br.DeletePatient(code_patient);
+            if (!Request)
+            {
+                lblData.Text = "HUBO UN ERROR";
+                lblData.Visible = true;
+                loadData();
+
+            }
+            else
+            {
+                lblData.Text = "Transaccion realizada con exito";
+                lblData.Visible = true;
+                lblData.ForeColor = System.Drawing.Color.Blue;
+                loadData();
+            }
+        }
+
+        protected void GridView1_RowDeleted(object sender, GridViewDeletedEventArgs e)
+        {
+
+        }
     }
 }
 

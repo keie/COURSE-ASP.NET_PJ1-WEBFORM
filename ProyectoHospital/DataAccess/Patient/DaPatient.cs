@@ -35,5 +35,15 @@ namespace DataAccess.Patient
             if (obj >= 1) answer = true;
             return answer;
         }
+        public bool DeletePatient(SqlConnection sqlConnection, string data)
+        {
+            bool answer = false;
+            SqlCommand sqlCommand = new SqlCommand("[usp.PATIENT.Delete]", sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@data", data);
+            int obj = sqlCommand.ExecuteNonQuery();
+            if (obj >= 1) answer = true;
+            return answer;
+        }
     }
 }

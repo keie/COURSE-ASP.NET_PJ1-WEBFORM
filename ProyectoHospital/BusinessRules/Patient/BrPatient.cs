@@ -63,5 +63,24 @@ namespace BusinessRules.Patient
             }
             return answer;
         }
+        public bool DeletePatient(string data)
+        {
+            bool answer = false;
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    DaPatient odaPatient = new DaPatient();
+                    answer = odaPatient.DeletePatient(connection, data);
+
+                }
+                catch (Exception e)
+                {
+                    RecordLog(e.Message, e.StackTrace);
+                }
+            }
+            return answer;
+        }
     }
 }
