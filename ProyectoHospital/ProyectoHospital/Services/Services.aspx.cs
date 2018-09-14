@@ -55,5 +55,56 @@ namespace ProyectoHospital.Services
         {
 
         }
+
+        protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+
+        }
+
+        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            castToTexbox(e);
+            Session["dataService"] = (codeService + '|' +
+              description + '|' +
+              type + '|' +
+              price );
+            Response.Redirect("ServiceEdition.aspx");
+        }
+
+        protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            GridView1.EditIndex = -1; loadData();
+        }
+        public void castToTexbox(GridViewUpdateEventArgs e)
+        {
+
+            codeService = ((TextBox)GridView1.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
+            description = ((TextBox)GridView1.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
+            type = ((TextBox)GridView1.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
+            price = ((TextBox)GridView1.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
+           
+
+
+        }
+
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            string code_service = GridView1.Rows[e.RowIndex].Cells[1].Text;
+            bool Request = br.DeleteService(code_service);
+            if (!Request)
+            {
+                lblData.Text = "HUBO UN ERROR";
+                lblData.Visible = true;
+                loadData();
+
+            }
+            else
+            {
+                lblData.Text = "Transaccion realizada con exito";
+                lblData.Visible = true;
+                lblData.ForeColor = System.Drawing.Color.Blue;
+                loadData();
+            }
+        }
     }
 }

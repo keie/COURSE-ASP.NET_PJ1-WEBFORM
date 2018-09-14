@@ -96,6 +96,7 @@
     <Content Include="Patients\Patients.aspx" />
     <Content Include="RegistroConsumo.aspx" />
     <Content Include="Reportes.aspx" />
+    <Content Include="Services\ServiceEdition.aspx" />
     <Content Include="Services\ServiceRegister.aspx" />
     <Content Include="Services\Services.aspx" />
     <Content Include="Web.config" />
@@ -237,6 +238,13 @@
     </Compile>
     <Compile Include="Reportes.aspx.designer.cs">
       <DependentUpon>Reportes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ServiceEdition.aspx.cs">
+      <DependentUpon>ServiceEdition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\ServiceEdition.aspx.designer.cs">
+      <DependentUpon>ServiceEdition.aspx</DependentUpon>
     </Compile>
     <Compile Include="Services\ServiceRegister.aspx.cs">
       <DependentUpon>ServiceRegister.aspx</DependentUpon>

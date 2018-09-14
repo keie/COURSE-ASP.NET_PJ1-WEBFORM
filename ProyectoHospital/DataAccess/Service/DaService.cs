@@ -25,5 +25,25 @@ namespace DataAccess.Service
             if (obj != null) answer = obj.ToString();
             return answer;
         }
+        public bool UpdateService(SqlConnection sqlConnection, string data)
+        {
+            bool answer = false;
+            SqlCommand sqlCommand = new SqlCommand("[usp.SERVICE.Update]", sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@data", data);
+            int obj = sqlCommand.ExecuteNonQuery();
+            if (obj >= 1) answer = true;
+            return answer;
+        }
+        public bool DeleteService(SqlConnection sqlConnection, string data)
+        {
+            bool answer = false;
+            SqlCommand sqlCommand = new SqlCommand("[usp.SERVICE.Delete]", sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@data", data);
+            int obj = sqlCommand.ExecuteNonQuery();
+            if (obj >= 1) answer = true;
+            return answer;
+        }
     }
 }
