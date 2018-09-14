@@ -75,6 +75,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Beds\BedEdition.aspx" />
     <Content Include="Beds\BedRegister.aspx" />
     <Content Include="Beds\Beds.aspx" />
     <Content Include="ControlPago.aspx" />
@@ -95,6 +96,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Beds\BedEdition.aspx.cs">
+      <DependentUpon>BedEdition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Beds\BedEdition.aspx.designer.cs">
+      <DependentUpon>BedEdition.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Beds\BedRegister.aspx.cs">
       <DependentUpon>BedRegister.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

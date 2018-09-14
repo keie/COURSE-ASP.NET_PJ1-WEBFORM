@@ -46,5 +46,24 @@ namespace BusinessRules.Bed
             }
             return answer;
         }
+        public bool UpdateBed(string data)
+        {
+            bool answer = false;
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    DaBed odaBed = new DaBed();
+                    answer = odaBed.UpdateBed(connection, data);
+
+                }
+                catch (Exception e)
+                {
+                    RecordLog(e.Message, e.StackTrace);
+                }
+            }
+            return answer;
+        }
     }
 }

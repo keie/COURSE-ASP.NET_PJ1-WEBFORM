@@ -57,5 +57,28 @@ namespace ProyectoHospital.Beds
         {
 
         }
+
+        protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            GridView1.EditIndex = e.NewEditIndex;
+        }
+
+        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            castToTexbox(e);
+            Session["dataBed"] = (nro_cama + '|' +
+              category + '|' +
+              price_daily + '|' +
+              state );
+            Response.Redirect("BedEdition.aspx");
+        }
+        public void castToTexbox(GridViewUpdateEventArgs e)
+        {
+
+            nro_cama = ((TextBox)GridView1.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
+            category = ((TextBox)GridView1.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
+            price_daily = ((TextBox)GridView1.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
+            state = ((TextBox)GridView1.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
+        }
     }
 }
