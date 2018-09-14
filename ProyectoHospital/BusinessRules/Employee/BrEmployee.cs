@@ -3,7 +3,6 @@
 namespace BusinessRules.Employee
 {
     using System;
-    using System.Collections.Generic;
     using System.Data.SqlClient;
     using DataAccess.Empleado;
     

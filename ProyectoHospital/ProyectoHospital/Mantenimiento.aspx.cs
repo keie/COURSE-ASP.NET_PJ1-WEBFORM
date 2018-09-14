@@ -22,7 +22,7 @@ namespace ProyectoHospital
             }
             if (Menu1.Items[1].Selected)
             {
-                Response.Redirect("Pacientes/Pacientes.aspx");
+                Response.Redirect("Patients/Patients.aspx");
             }
             /*if (Menu1.Items[2].Selected)
             {

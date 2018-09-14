@@ -4,9 +4,8 @@ namespace ProyectoHospital.Employess
     using BusinessRules.Employee;
     using System;
     using System.Data;
-    using System.Web.Services.Description;
     using System.Web.UI.WebControls;
-    using static System.Net.Mime.MediaTypeNames;
+    
 
     public partial class Employess : System.Web.UI.Page
     {
@@ -61,9 +60,6 @@ namespace ProyectoHospital.Employess
                     GridView1.DataBind();
 
                 }
-            
-
-            
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)

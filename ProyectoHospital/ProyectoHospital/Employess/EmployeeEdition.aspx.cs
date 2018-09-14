@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
+﻿
 namespace ProyectoHospital.Employess
 {
     using BusinessRules.Employee;
+    using System;
+  
+
     public partial class EmployeeEdition : System.Web.UI.Page
     {
         BrEmployee br = new BrEmployee();

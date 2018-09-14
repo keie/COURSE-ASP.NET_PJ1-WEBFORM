@@ -85,8 +85,9 @@
     <Content Include="Login.aspx" />
     <Content Include="Mantenimiento.aspx" />
     <Content Include="Menu.aspx" />
-    <Content Include="Pacientes\CreatePatient.aspx" />
-    <Content Include="Pacientes\Pacientes.aspx" />
+    <Content Include="Patients\PatientEdition.aspx" />
+    <Content Include="Patients\PatientRegister.aspx" />
+    <Content Include="Patients\Patients.aspx" />
     <Content Include="RegistroConsumo.aspx" />
     <Content Include="Reportes.aspx" />
     <Content Include="Web.config" />
@@ -151,19 +152,26 @@
     <Compile Include="Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pacientes\CreatePatient.aspx.cs">
-      <DependentUpon>CreatePatient.aspx</DependentUpon>
+    <Compile Include="Patients\PatientEdition.aspx.cs">
+      <DependentUpon>PatientEdition.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pacientes\CreatePatient.aspx.designer.cs">
-      <DependentUpon>CreatePatient.aspx</DependentUpon>
+    <Compile Include="Patients\PatientEdition.aspx.designer.cs">
+      <DependentUpon>PatientEdition.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pacientes\Pacientes.aspx.cs">
-      <DependentUpon>Pacientes.aspx</DependentUpon>
+    <Compile Include="Patients\PatientRegister.aspx.cs">
+      <DependentUpon>PatientRegister.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pacientes\Pacientes.aspx.designer.cs">
-      <DependentUpon>Pacientes.aspx</DependentUpon>
+    <Compile Include="Patients\PatientRegister.aspx.designer.cs">
+      <DependentUpon>PatientRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Patients\Patients.aspx.cs">
+      <DependentUpon>Patients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Patients\Patients.aspx.designer.cs">
+      <DependentUpon>Patients.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistroConsumo.aspx.cs">

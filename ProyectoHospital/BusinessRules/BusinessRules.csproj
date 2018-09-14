@@ -45,6 +45,7 @@
     <Compile Include="BrConnection.cs" />
     <Compile Include="BrSaveLog.cs" />
     <Compile Include="Employee\BrEmployee.cs" />
+    <Compile Include="Patient\BrPatient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreatePatient.aspx.cs" Inherits="ProyectoHospital.Pacientes.CreatePatient" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PatientRegister.aspx.cs" Inherits="ProyectoHospital.Pacientes.CreatePatient" %>
 
 <!DOCTYPE html>
 
@@ -65,14 +65,16 @@
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
                     <td>
-                        <asp:Button ID="btnRegister" runat="server" Text="Register" />
+                        <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register" />
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">
-                        <asp:HyperLink ID="HyperLink1" runat="server">Return</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Patients/Patients.aspx">Return</asp:HyperLink>
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Label ID="lblData" runat="server" Text="Label"></asp:Label>
+                    </td>
                 </tr>
             </table>
         </div>
