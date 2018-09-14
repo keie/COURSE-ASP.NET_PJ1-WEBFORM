@@ -28,11 +28,11 @@ namespace ProyectoHospital
             {
                 Response.Redirect("Beds/Beds.aspx");
             }
-            /* if (Menu1.Items[3].Selected)
+             if (Menu1.Items[3].Selected)
              {
-                 Response.Redirect("ControlPago.aspx");
+                 Response.Redirect("Medicines/Medicines.aspx");
              }
-             if (Menu1.Items[4].Selected)
+            /* if (Menu1.Items[4].Selected)
              {
                  Response.Redirect("Reportes.aspx");
              }*/

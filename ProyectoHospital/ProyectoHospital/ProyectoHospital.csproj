@@ -87,6 +87,8 @@
     <Content Include="Images\edit.png" />
     <Content Include="Login.aspx" />
     <Content Include="Mantenimiento.aspx" />
+    <Content Include="Medicines\MedicineRegister.aspx" />
+    <Content Include="Medicines\Medicines.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="Patients\PatientEdition.aspx" />
     <Content Include="Patients\PatientRegister.aspx" />
@@ -168,6 +170,20 @@
     </Compile>
     <Compile Include="Mantenimiento.aspx.designer.cs">
       <DependentUpon>Mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Medicines\MedicineRegister.aspx.cs">
+      <DependentUpon>MedicineRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Medicines\MedicineRegister.aspx.designer.cs">
+      <DependentUpon>MedicineRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Medicines\Medicines.aspx.cs">
+      <DependentUpon>Medicines.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Medicines\Medicines.aspx.designer.cs">
+      <DependentUpon>Medicines.aspx</DependentUpon>
     </Compile>
     <Compile Include="Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
