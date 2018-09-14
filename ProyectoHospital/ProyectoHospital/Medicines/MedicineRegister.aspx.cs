@@ -12,7 +12,7 @@ namespace ProyectoHospital.Medicines
         {
             if (!IsPostBack)
             {
-                string[] MedicineStock = { "1", "0" };
+                string[] MedicineStock = { "Disponible", "No Disponible" };
                 ddlStock.DataSource = MedicineStock;
                 ddlStock.DataBind();
                 
@@ -21,8 +21,8 @@ namespace ProyectoHospital.Medicines
 
         protected void btnReg_Click(object sender, EventArgs e)
         {
-            if (ddlStock.SelectedItem.Text == "1") stock = "Disponible";
-            else stock = "No Disponible";
+            if (ddlStock.SelectedItem.Text == "Disponible") stock = "1";
+            else stock = "0";
             String data = (txtName.Text + '|' +
                 txtLab.Text + '|' +
                 txtPrice.Text+'|'+

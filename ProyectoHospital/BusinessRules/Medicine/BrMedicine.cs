@@ -44,5 +44,24 @@ namespace BusinessRules.Medicine
             }
             return answer;
         }
+        public bool UpdateMedicine(string data)
+        {
+            bool answer = false;
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    DaMedicine odaMedicine = new DaMedicine();
+                    answer = odaMedicine.UpdateMedicine(connection,data);
+
+                }
+                catch (Exception e)
+                {
+                    RecordLog(e.Message, e.StackTrace);
+                }
+            }
+            return answer;
+        }
     }
 }

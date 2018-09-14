@@ -40,7 +40,7 @@
             </tr>
             <tr>
                 <td class="auto-style5">
-                    <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                    <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
@@ -75,7 +75,9 @@
                 <td class="auto-style4">
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Mantenimiento.aspx">Return</asp:HyperLink>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Medicines/MedicineRegister.aspx">Create Medicine</asp:HyperLink>
+                </td>
             </tr>
         </table>
         <div>

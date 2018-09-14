@@ -6,7 +6,8 @@ namespace ProyectoHospital.Medicines
     using BusinessRules.Medicine;
     using System;
     using System.Data;
-  
+    using System.Web.UI.WebControls;
+
     public partial class Medicines : System.Web.UI.Page
     {
         BrMedicine br = new BrMedicine();
@@ -55,6 +56,39 @@ namespace ProyectoHospital.Medicines
         }
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        protected void GridView1_RowEditing(object sender, System.Web.UI.WebControls.GridViewEditEventArgs e)
+        {
+            GridView1.EditIndex = e.NewEditIndex;
+        }
+
+        protected void GridView1_RowUpdating(object sender, System.Web.UI.WebControls.GridViewUpdateEventArgs e)
+        {
+            castToTexbox(e);
+            Session["dataMedicine"] = (codeMedicine + '|' +
+              name + '|' +
+              lab + '|' +
+              price + '|' +
+              stock );
+            Response.Redirect("MedicineEdition.aspx");
+        }
+
+        protected void GridView1_RowCancelingEdit(object sender, System.Web.UI.WebControls.GridViewCancelEditEventArgs e)
+        {
+            GridView1.EditIndex = -1; loadData();
+        }
+        public void castToTexbox(GridViewUpdateEventArgs e)
+        {
+
+            codeMedicine = ((TextBox)GridView1.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
+            name = ((TextBox)GridView1.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
+            lab = ((TextBox)GridView1.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
+            price = ((TextBox)GridView1.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
+            stock = ((TextBox)GridView1.Rows[e.RowIndex].Cells[5].Controls[0]).Text;
+           
+
 
         }
     }
