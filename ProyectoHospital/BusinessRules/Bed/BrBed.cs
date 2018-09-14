@@ -6,7 +6,6 @@ namespace BusinessRules.Bed
     using System;
     using System.Data.SqlClient;
     using DataAccess.Bed;
-    using System;
     public class BrBed:brConnection
     {
         public bool RegisterBed(string data)
@@ -56,6 +55,25 @@ namespace BusinessRules.Bed
                     connection.Open();
                     DaBed odaBed = new DaBed();
                     answer = odaBed.UpdateBed(connection, data);
+
+                }
+                catch (Exception e)
+                {
+                    RecordLog(e.Message, e.StackTrace);
+                }
+            }
+            return answer;
+        }
+        public bool DeleteBed(string data)
+        {
+            bool answer = false;
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    DaBed odaBed = new DaBed();
+                    answer = odaBed.DeleteBed(connection, data);
 
                 }
                 catch (Exception e)

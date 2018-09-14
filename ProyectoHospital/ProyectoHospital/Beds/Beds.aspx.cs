@@ -80,5 +80,30 @@ namespace ProyectoHospital.Beds
             price_daily = ((TextBox)GridView1.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
             state = ((TextBox)GridView1.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
         }
+
+        protected void GridView1_RowDeleted(object sender, GridViewDeletedEventArgs e)
+        {
+
+        }
+
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            string nro_cama = GridView1.Rows[e.RowIndex].Cells[1].Text;
+            bool Request = br.DeleteBed(nro_cama);
+            if (!Request)
+            {
+                lblData.Text = "HUBO UN ERROR";
+                lblData.Visible = true;
+                loadData();
+
+            }
+            else
+            {
+                lblData.Text = "Transaccion realizada con exito";
+                lblData.Visible = true;
+                lblData.ForeColor = System.Drawing.Color.Blue;
+                loadData();
+            }
+        }
     }
 }

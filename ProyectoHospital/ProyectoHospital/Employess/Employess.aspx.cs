@@ -97,8 +97,6 @@ namespace ProyectoHospital.Employess
                 lblData.ForeColor = System.Drawing.Color.Blue;
                 loadData();
             }
-            
-           
         }
 
         protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)

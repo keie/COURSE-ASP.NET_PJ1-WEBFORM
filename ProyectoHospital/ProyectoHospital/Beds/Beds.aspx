@@ -22,6 +22,11 @@
             height: 23px;
             width: 500px;
         }
+        .auto-style6 {
+            height: 23px;
+            width: 500px;
+            text-align: right;
+        }
     </style>
 </head>
 <body>
@@ -41,7 +46,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style4">
-                        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDeleted="GridView1_RowDeleted" OnRowDeleting="GridView1_RowDeleting">
                             <AlternatingRowStyle BackColor="White" />
                             <Columns>
                                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
@@ -61,7 +66,9 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style5"></td>
+                    <td class="auto-style6">
+                        <asp:Label ID="lblData" runat="server" Text="Label"></asp:Label>
+                    </td>
                     <td class="auto-style2"></td>
                 </tr>
                 <tr>
