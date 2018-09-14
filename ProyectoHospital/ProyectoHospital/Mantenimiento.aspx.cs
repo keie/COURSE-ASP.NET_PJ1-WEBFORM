@@ -20,11 +20,11 @@ namespace ProyectoHospital
             {
                 Response.Redirect("Employess/Employess.aspx");
             }
-           /* if (Menu1.Items[1].Selected)
+            if (Menu1.Items[1].Selected)
             {
-                Response.Redirect("Hospitalizacion.aspx");
+                Response.Redirect("Pacientes/Pacientes.aspx");
             }
-            if (Menu1.Items[2].Selected)
+            /*if (Menu1.Items[2].Selected)
             {
                 Response.Redirect("RegistroConsumo.aspx");
             }
