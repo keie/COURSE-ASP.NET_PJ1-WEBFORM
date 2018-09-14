@@ -49,6 +49,7 @@
     <Compile Include="Medicine\BrMedicine.cs" />
     <Compile Include="Patient\BrPatient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\BrService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">

@@ -45,6 +45,7 @@
     <Compile Include="Medicine\DaMedicine.cs" />
     <Compile Include="Patient\DaPatient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\DaService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

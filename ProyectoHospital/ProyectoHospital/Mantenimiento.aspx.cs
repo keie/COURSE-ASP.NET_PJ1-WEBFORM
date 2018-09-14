@@ -32,10 +32,10 @@ namespace ProyectoHospital
              {
                  Response.Redirect("Medicines/Medicines.aspx");
              }
-            /* if (Menu1.Items[4].Selected)
+             if (Menu1.Items[4].Selected)
              {
-                 Response.Redirect("Reportes.aspx");
-             }*/
+                 Response.Redirect("Services/Services.aspx");
+             }
         }
     }
 }

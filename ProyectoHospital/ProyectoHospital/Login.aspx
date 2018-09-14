@@ -46,7 +46,7 @@
                 <tr>
                     <td class="auto-style5">Contrasena</td>
                     <td>
-                        <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" ></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
