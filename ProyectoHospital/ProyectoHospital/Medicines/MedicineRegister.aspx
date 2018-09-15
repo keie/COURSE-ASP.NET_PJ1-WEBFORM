@@ -77,6 +77,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="" style="text-align:right">
+                    <button type="button" onclick="history.back();return 0;" class="btn btn-secondary" >Return</button>
                  <asp:Label ID="lblData" runat="server" Text="Label"></asp:Label>
                 <asp:Button ID="btnReg" runat="server" OnClick="btnReg_Click" Text="Registrar" CssClass="btn btn-primary"/>
             </div>

@@ -69,10 +69,10 @@
             </tr>
             <tr>
                 <td class="auto-style3">
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Mantenimiento.aspx">Return</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Mantenimiento.aspx" CssClass="btn btn-secondary">Return</asp:HyperLink>
                 </td>
                 <td>
-                    <asp:HyperLink ID="linkEmployee" runat="server" NavigateUrl="~/Employess/EmployeeRegister.aspx">Create Employee</asp:HyperLink>
+                    <asp:HyperLink ID="linkEmployee" runat="server" NavigateUrl="~/Employess/EmployeeRegister.aspx" CssClass="btn btn-primary">Create Employee</asp:HyperLink>
                 </td>
             </tr>
         </table>

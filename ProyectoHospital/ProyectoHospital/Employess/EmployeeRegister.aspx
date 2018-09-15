@@ -4,84 +4,62 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            text-align: center;
-            height: 23px;
-        }
-        .auto-style4 {
-            width: 365px;
-            text-align: right;
-        }
-        .auto-style5 {
-            width: 365px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
 </head>
 <body>
     <form id="form1" runat="server">
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style2" colspan="2"><strong>REGISTRO DE EMPLEADO</strong></td>
-            </tr>
-            <tr>
-                <td class="auto-style4">APELLIDO</td>
-                <td>
-                    <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style4">NOMBRE</td>
-                <td>
-                    <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style4">TIPO DE EMPLEADO </td>
-                <td>
-                    <asp:DropDownList ID="ddlType" runat="server">
+        <div class="container">
+            <br /><br />
+            <div class="row">
+                <div class="col-12">
+                    <h2>REGISTRO DE EMPLEADO</h2>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-4">
+                    <label for="txtLastName">APELLIDO</label>
+                    <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+                <div class="col-4">
+                    <label for="txtName">NOMBRE</label>
+                    <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+                <div class="col-4">
+                    <label for="ddlType">TIPO DE EMPLEADO</label>
+                    <asp:DropDownList ID="ddlType" runat="server" CssClass="form-control">
                     </asp:DropDownList>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style4">CUENTA</td>
-                <td>
-                    <asp:TextBox ID="txtAccount" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style4">CONTRASEÑA</td>
-                <td>
-                    <asp:TextBox ID="txtPass" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style4">TURNO</td>
-                <td>
-                    <asp:DropDownList ID="ddlTurn" runat="server">
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-4">
+                    <label for="txtAccount">CUENTA</label>
+                    <asp:TextBox ID="txtAccount" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+                <div class="col-4">
+                    <label for="txtPass">CONTRASEÑA</label>
+                    <asp:TextBox ID="txtPass" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                </div>
+                <div class="col-4">
+                    <label for="ddlTurn">TURNO</label>
+                    <asp:DropDownList ID="ddlTurn" runat="server" CssClass="form-control">
                     </asp:DropDownList>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style4">&nbsp;</td>
-                <td>
-                    <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Registrar" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style5">
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Employess/Employess.aspx">Return</asp:HyperLink>
-                </td>
-                <td>
+                </div>
+            </div>
+            <br />
+            <div class="row">               
+                <div class="col-12" style="text-align:right;">
                     <asp:Label ID="lblData" runat="server" Text="Label" Visible="False"></asp:Label>
-                </td>
-            </tr>
-        </table>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Employess/Employess.aspx" CssClass="btn btn-secondary">Return</asp:HyperLink>
+                    <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Registrar" CssClass="btn btn-primary" />
+
+                </div>
+            </div>
+        </div>
         <div>
         </div>
     </form>
