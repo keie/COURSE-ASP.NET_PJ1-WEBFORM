@@ -4,65 +4,59 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type"
+    content="text/html; charset=utf-8"/>
     <title></title>
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <style type="text/css">
-        .auto-style1 {
-            width: 100%;
+        
+        .login{
+            margin:auto;
+            margin-top:auto;
+            width:500px;
+            height:500px;
         }
-        .auto-style2 {
-            height: 23px;
-            text-align: center;
-        }
-        .auto-style3 {
-            width: 439px;
-        }
-        .auto-style5 {
-            width: 439px;
-            text-align: right;
-        }
-        .auto-style6 {
-            width: 439px;
-            height: 22px;
-        }
-        .auto-style7 {
-            height: 22px;
+
+        .local{
+            max-width:350px;
         }
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <table class="auto-style1">
-                <tr>
-                    <td class="auto-style2" colspan="2"><strong>SISTEMA DE CLINICA</strong></td>
-                </tr>
-                <tr>
-                    <td class="auto-style5">Usuario</td>
-                    <td>
-                        <asp:TextBox ID="txtUser" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style5">Contrasena</td>
-                    <td>
-                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" ></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td>
-                        <asp:Button ID="btnEnter" runat="server" OnClick="btnEnter_Click" Text="Ingresar" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style6"></td>
-                    <td class="auto-style7">
-                        <asp:Label ID="lblReq" runat="server" BorderColor="Red" ForeColor="#FF3300" Text="Label" Visible="False"></asp:Label>
-                    </td>
-                </tr>
-            </table>
+   <form id="form1" runat="server">
+
+       <div class="login" >
+           <br /><br /><br />
+             <div class="" >
+            <div class="">
+                <div class="">
+                    <h2>SISTEMA DE CLINICA</h2>
+                </div>
+            </div> 
+            <div class="">
+                <div class="">
+                    <div class="local">
+                        <div class="form-group">
+                            <label for="txtUser">Usuario</label>
+                            <asp:TextBox ID="txtUser" runat="server" CssClass="form-control" ></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPassword">Contraseña</label>
+                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" ></asp:TextBox>
+                        </div>
+                        <div class="" style="text-align:right;">
+				                <asp:Button ID="btnEnter" runat="server" OnClick="btnEnter_Click" Text="Ingresar" CssClass="btn btn-primary" />
+                                <asp:Label ID="lblReq" runat="server" BorderColor="Red" ForeColor="#FF3300" Text="Label" Visible="False"></asp:Label>
+                        </div>
+                        <div style="text-align:center;">
+                            <label>&copy;Todos los Derechos Reservados</label>
+                        </div>
+                    </div>
+                </div>                
+            </div>           
         </div>
+       </div>
     </form>
 </body>
 </html>
