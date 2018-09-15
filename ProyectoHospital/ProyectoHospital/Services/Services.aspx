@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
     <style type="text/css">
         .auto-style1 {
             width: 100%;
@@ -23,10 +24,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="container">
+            <br />
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style2" colspan="2"><strong>SERVICIOS</strong></td>
+                    <td class="auto-style2" colspan="2"><h4>SERVICIOS</h4></td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
@@ -38,7 +40,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">
-                        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDeleting="GridView1_RowDeleting">
+                        <asp:GridView CssClass="table" ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDeleting="GridView1_RowDeleting">
                             <AlternatingRowStyle BackColor="White" />
                             <Columns>
                                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
@@ -69,10 +71,10 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Mantenimiento.aspx">Return</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Mantenimiento.aspx" CssClass="btn btn-secondary">Return</asp:HyperLink>
                     </td>
                     <td>
-                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Services/ServiceRegister.aspx">Create Service</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Services/ServiceRegister.aspx" CssClass="btn btn-primary">Create Service</asp:HyperLink>
                     </td>
                 </tr>
             </table>
