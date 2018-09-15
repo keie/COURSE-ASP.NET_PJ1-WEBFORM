@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <style type="text/css">
         .auto-style1 {
             width: 100%;
@@ -34,56 +35,55 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div class="auto-style2">
-            <strong>REGISTRO DE MEDICINAS</strong></div>
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style3"><strong>Nombre Del Medicamento</strong></td>
-                <td class="auto-style5">
-                    <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style6"><strong>Laboratorio</strong></td>
-                <td>
-                    <asp:TextBox ID="txtLab" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style6"><strong>Precio</strong></td>
-                <td>
-                    <asp:TextBox ID="txtPrice" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style6"><strong>Stock</strong></td>
-                <td>
-                    <asp:DropDownList ID="ddlStock" runat="server">
+    <form id="form1" runat="server" class="container">
+        <br />
+        <div class="row">
+            <div class="col-12">
+                 <h2>Registro De Medicinas</h2>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="txtName">Nombre Del Medicamento</label>
+                    <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+            </div> 
+            <div class="col-3"><div class="form-group">
+                <label for="txtLab">Laboratorio</label>
+                <asp:TextBox ID="txtLab" runat="server" CssClass="form-control"></asp:TextBox>
+                </div></div> 
+            <div class="col-3"><div class="form-group">
+                <label for="txtPrice">Precio</label>
+                <asp:TextBox ID="txtPrice" runat="server" CssClass="form-control"></asp:TextBox>
+                </div></div>
+        </div>
+       <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="ddlStock">Stock</label>
+                    <asp:DropDownList ID="ddlStock" runat="server" CssClass="form-control">
                     </asp:DropDownList>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style4">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style7"></td>
-                <td class="auto-style5">
-                    <asp:Button ID="btnReg" runat="server" OnClick="btnReg_Click" Text="Registrar" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style4">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style4">&nbsp;</td>
-                <td>
-                    <asp:Label ID="lblData" runat="server" Text="Label"></asp:Label>
-                </td>
-            </tr>
-        </table>
+                </div>
+            </div> 
+            <div class="col-3"><div class="form-group">
+                
+                </div></div> 
+            <div class="col-3"><div class="form-group">
+                
+                </div></div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="" style="text-align:right">
+                 <asp:Label ID="lblData" runat="server" Text="Label"></asp:Label>
+                <asp:Button ID="btnReg" runat="server" OnClick="btnReg_Click" Text="Registrar" CssClass="btn btn-primary"/>
+            </div>
+            </div>
+            
+        </div>
+               
     </form>
 </body>
 </html>

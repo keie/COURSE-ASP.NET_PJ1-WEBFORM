@@ -58,15 +58,6 @@ namespace ProyectoHospital.Medicines {
         protected global::System.Web.UI.WebControls.DropDownList ddlStock;
         
         /// <summary>
-        /// btnReg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReg;
-        
-        /// <summary>
         /// lblData control.
         /// </summary>
         /// <remarks>
@@ -74,5 +65,14 @@ namespace ProyectoHospital.Medicines {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblData;
+        
+        /// <summary>
+        /// btnReg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnReg;
     }
 }

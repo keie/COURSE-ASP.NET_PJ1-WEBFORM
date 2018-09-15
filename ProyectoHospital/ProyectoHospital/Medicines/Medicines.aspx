@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <head runat="server">
     <title></title>
     <style type="text/css">
@@ -25,10 +26,12 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class="container">
         <table class="auto-style1">
             <tr>
-                <td class="auto-style3" colspan="2"><strong>MEDICAMENTOS</strong></td>
+                <td class="auto-style3" colspan="2">
+                    <h2>Medicamentos<span>Listado</span></h2>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style4">&nbsp;</td>
@@ -40,10 +43,10 @@
             </tr>
             <tr>
                 <td class="auto-style5">
-                    <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDeleting="GridView1_RowDeleting">
+                    <asp:GridView CssClass="table" ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDeleting="GridView1_RowDeleting">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
-                            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ControlStyle-CssClass="btn btn-danger" />
                         </Columns>
                         <EditRowStyle BackColor="#2461BF" />
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -75,10 +78,10 @@
             </tr>
             <tr>
                 <td class="auto-style4">
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Mantenimiento.aspx">Return</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Mantenimiento.aspx" CssClass="btn btn-secondary">Return</asp:HyperLink>
                 </td>
                 <td>
-                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Medicines/MedicineRegister.aspx">Create Medicine</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Medicines/MedicineRegister.aspx" CssClass="btn btn-primary">Create Medicine</asp:HyperLink>
                 </td>
             </tr>
         </table>
