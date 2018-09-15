@@ -31,6 +31,15 @@ namespace ProyectoHospital.Medicines {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
+        /// lblData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblData;
+        
+        /// <summary>
         /// HyperLink1 control.
         /// </summary>
         /// <remarks>

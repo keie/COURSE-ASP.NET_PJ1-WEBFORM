@@ -40,7 +40,7 @@
             </tr>
             <tr>
                 <td class="auto-style5">
-                    <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                    <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDeleting="GridView1_RowDeleting">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
@@ -65,7 +65,9 @@
             </tr>
             <tr>
                 <td class="auto-style4">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Label ID="lblData" runat="server" Text="Label" Visible="False"></asp:Label>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style4">&nbsp;</td>
