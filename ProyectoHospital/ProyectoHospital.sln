@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBases", "DataBases\DataBases.csproj", "{1F8BDFDA-D595-4A1D-83CF-FCD932B65E2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalMvc", "HospitalMvc\HospitalMvc.csproj", "{9F3C4FBF-016D-45C2-B68B-6CC70C70E57D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1F8BDFDA-D595-4A1D-83CF-FCD932B65E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F8BDFDA-D595-4A1D-83CF-FCD932B65E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F8BDFDA-D595-4A1D-83CF-FCD932B65E2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F3C4FBF-016D-45C2-B68B-6CC70C70E57D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F3C4FBF-016D-45C2-B68B-6CC70C70E57D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F3C4FBF-016D-45C2-B68B-6CC70C70E57D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F3C4FBF-016D-45C2-B68B-6CC70C70E57D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
